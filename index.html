@@ -25,28 +25,11 @@
       gesture-detector
       id="scene"
     >
-      <a-marker
-        type="pattern"
-        url="path/to/pattern-rabbit.patt"
-        raycaster="objects: .clickable"
-        emitevents="true"
-        cursor="fuse: false; rayOrigin: mouse;"
-        id="markerA"
-      >
-        <a-entity
-          animation-mixer="clip: *;"
-          gltf-model="obj/gltf/rabbit.gltf"
-          position="0 0 0"
-          scale="1 1 1"
-          class="clickable"
-          gesture-handler
-        >
-        </a-entity>
-      </a-marker>
+      
 
       <a-marker
         type="pattern"
-        url="path/to/pattern-horse.patt"
+        url="path/to/pattern-marker.patt"
         raycaster="objects: .clickable"
         emitevents="true"
         cursor="fuse: false; rayOrigin: mouse;"
