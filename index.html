@@ -1,166 +1,174 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AR_WEB_Myrom - Главная</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>AR_WEB_Myrom - Главная</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 20px;
-        }
+            body {
+                font-family:
+                    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                    Oxygen, Ubuntu, Cantarell, sans-serif;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                min-height: 100vh;
+                padding: 20px;
+            }
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+            .container {
+                max-width: 1200px;
+                margin: 0 auto;
+            }
 
-        header {
-            text-align: center;
-            color: white;
-            margin-bottom: 40px;
-            padding: 20px;
-        }
+            header {
+                text-align: center;
+                color: white;
+                margin-bottom: 40px;
+                padding: 20px;
+            }
 
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
+            h1 {
+                font-size: 2.5rem;
+                margin-bottom: 10px;
+            }
 
-        .description {
-            font-size: 1.1rem;
-            opacity: 0.9;
-            max-width: 600px;
-            margin: 10px auto;
-        }
+            .description {
+                font-size: 1.1rem;
+                opacity: 0.9;
+                max-width: 600px;
+                margin: 10px auto;
+            }
 
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-            gap: 20px;
-            margin-bottom: 40px;
-        }
+            .grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                gap: 20px;
+                margin-bottom: 40px;
+            }
 
-        .scene-card {
-            background: white;
-            border-radius: 12px;
-            padding: 20px;
-            text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            cursor: pointer;
-            text-decoration: none;
-            color: #333;
-        }
+            .scene-card {
+                background: white;
+                border-radius: 12px;
+                padding: 20px;
+                text-align: center;
+                transition:
+                    transform 0.3s ease,
+                    box-shadow 0.3s ease;
+                cursor: pointer;
+                text-decoration: none;
+                color: #333;
+            }
 
-        .scene-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-        }
+            .scene-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            }
 
-        .scene-number {
-            font-size: 2rem;
-            font-weight: bold;
-            color: #667eea;
-            margin-bottom: 10px;
-        }
+            .scene-number {
+                font-size: 2rem;
+                font-weight: bold;
+                color: #667eea;
+                margin-bottom: 10px;
+            }
 
-        .scene-links {
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-            margin-top: 15px;
-        }
+            .scene-links {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+                margin-top: 15px;
+            }
 
-        .scene-link {
-            background: #667eea;
-            color: white;
-            padding: 8px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: background 0.3s ease;
-        }
+            .scene-link {
+                background: #667eea;
+                color: white;
+                padding: 8px;
+                border-radius: 6px;
+                text-decoration: none;
+                font-size: 0.9rem;
+                transition: background 0.3s ease;
+            }
 
-        .scene-link:hover {
-            background: #764ba2;
-        }
+            .scene-link:hover {
+                background: #764ba2;
+            }
 
-        .info-section {
-            background: white;
-            border-radius: 12px;
-            padding: 30px;
-            margin-top: 40px;
-        }
+            .info-section {
+                background: white;
+                border-radius: 12px;
+                padding: 30px;
+                margin-top: 40px;
+            }
 
-        .info-section h2 {
-            color: #667eea;
-            margin-bottom: 15px;
-        }
+            .info-section h2 {
+                color: #667eea;
+                margin-bottom: 15px;
+            }
 
-        .info-section ul {
-            list-style-position: inside;
-            line-height: 1.8;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <header>
-            <h1>🎯 AR_WEB_Myrom</h1>
-            <p class="description">
-                Проект дополненной реальности с QR-кодами и 3D моделями. 
-                Выберите сцену для начала работы с AR.
-            </p>
-        </header>
+            .info-section ul {
+                list-style-position: inside;
+                line-height: 1.8;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <header>
+                <h1>🎯 AR_WEB_Myrom</h1>
+                <p class="description">
+                    Проект дополненной реальности с QR-кодами и 3D моделями.
+                    Выберите сцену для начала работы с AR.
+                </p>
+            </header>
 
-        <div class="grid" id="scenes-grid"></div>
+            <div class="grid" id="scenes-grid"></div>
 
-        <div class="info-section">
-            <h2>Как использовать</h2>
-            <ul>
-                <li>Выберите любую сцену из списка выше</li>
-                <li>Разрешите доступ к камере вашего устройства</li>
-                <li>Наведите камеру на соответствующий QR-код</li>
-                <li>3D модель появится на экране</li>
-                <li>Используйте жесты для управления моделью (поворот, масштаб)</li>
-            </ul>
+            <div class="info-section">
+                <h2>Как использовать</h2>
+                <ul>
+                    <li>Выберите любую сцену из списка выше</li>
+                    <li>Разрешите доступ к камере вашего устройства</li>
+                    <li>Наведите камеру на соответствующий QR-код</li>
+                    <li>3D модель появится на экране</li>
+                    <li>
+                        Используйте жесты для управления моделью (поворот,
+                        масштаб)
+                    </li>
+                </ul>
+            </div>
+
+            <div class="info-section">
+                <h2>Технологии</h2>
+                <ul>
+                    <li>A-Frame - фреймворк для создания VR/AR опыта</li>
+                    <li>
+                        AR.js - библиотека для дополненной реальности в браузере
+                    </li>
+                    <li>GLTF - формат 3D моделей</li>
+                    <li>Pattern Tracking - отслеживание маркеров QR-кодов</li>
+                </ul>
+            </div>
         </div>
 
-        <div class="info-section">
-            <h2>Технологии</h2>
-            <ul>
-                <li>A-Frame - фреймворк для создания VR/AR опыта</li>
-                <li>AR.js - библиотека для дополненной реальности в браузере</li>
-                <li>GLTF - формат 3D моделей</li>
-                <li>Pattern Tracking - отслеживание маркеров QR-кодов</li>
-            </ul>
-        </div>
-    </div>
+        <script>
+            const scenesGrid = document.getElementById("scenes-grid");
 
-    <script>
-        const scenesGrid = document.getElementById('scenes-grid');
-        
-        for (let i = 1; i <= 45; i++) {
-            const folder = String(i).padStart(2, '0');
-            const card = document.createElement('div');
-            card.className = 'scene-card';
-            card.innerHTML = `
+            for (let i = 1; i <= 45; i++) {
+                const folder = String(i).padStart(2, "0");
+                const card = document.createElement("div");
+                card.className = "scene-card";
+                card.innerHTML = `
                 <div class="scene-number">AR ${i}</div>
                 <div class="scene-links">
                     <a href="${folder}/index.html" class="scene-link">Marker Tracking</a>
-                    <a href="${folder}/image-tracking.html" class="scene-link">Image Tracking</a>
                 </div>
             `;
-            scenesGrid.appendChild(card);
-        }
-    </script>
-</body>
+                scenesGrid.appendChild(card);
+            }
+        </script>
+    </body>
 </html>
