@@ -4,7 +4,7 @@
 
 ## 🚀 Демо
 
-**Живая версия:** `https://[username].github.io/[repository-name]/`
+**Живая версия:** [https://[username].github.io/[repository-name]/](https://loguncov.github.io/AR_Myrom/)
 
 > После первого деплоя на GitHub Pages замените ссылку выше на свой URL
 
