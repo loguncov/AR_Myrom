@@ -105,8 +105,9 @@ This project is configured for automatic deployment to GitHub Pages on every com
 
 **How it works:**
 - The workflow automatically triggers on commits to main/master branches
-- All project files are uploaded as-is (static HTML deployment)
-- No build process needed - `index.html` serves as the entry point
+- All static site files are uploaded (`.git` and `.github` are automatically excluded for security)
+- No build process needed - `index.html` in the root serves as the entry point
+- All AR scenes (folders 01-45) and shared resources (common/) are deployed
 - GitHub Pages provides HTTPS automatically for AR camera access
 
 ### Static File Serving (Replit Development)
