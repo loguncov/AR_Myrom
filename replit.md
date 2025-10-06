@@ -6,6 +6,9 @@ AR_WEB_Myrom is an Augmented Reality web application that allows users to scan Q
 **Current State:** The application is fully configured and running on Replit with a Python HTTP server serving static files on port 5000.
 
 ## Recent Changes
+- **October 6, 2025**: GitHub Pages automatic deployment configured
+  - Added GitHub Actions workflow for automatic deployment on every commit
+  - Configured automatic publishing to GitHub Pages
 - **October 6, 2025**: Initial Replit setup completed
   - Created main landing page (index.html) with navigation to all 45 AR scenes
   - Configured Python HTTP server to serve static files on port 5000
@@ -68,13 +71,51 @@ The server runs automatically via the configured workflow:
 
 ## Deployment
 
-### Static File Serving
+### GitHub Pages Automatic Deployment
+
+This project is configured for automatic deployment to GitHub Pages on every commit.
+
+**Setup Instructions:**
+
+1. **Push code to GitHub:**
+   ```bash
+   git add .
+   git commit -m "Your commit message"
+   git push origin main
+   ```
+
+2. **Enable GitHub Pages in your repository:**
+   - Go to your GitHub repository
+   - Click **Settings** → **Pages**
+   - Under **Build and deployment**:
+     - **Source**: Select "GitHub Actions"
+   - Save the settings
+
+3. **Automatic deployment:**
+   - Every push to `main` or `master` branch triggers automatic deployment
+   - GitHub Actions workflow (`.github/workflows/deploy.yml`) handles the build and deployment
+   - Your site will be available at: `https://[username].github.io/[repository-name]/`
+   - Deployment takes 1-2 minutes after each commit
+
+4. **Monitor deployment:**
+   - Check the **Actions** tab in your GitHub repository
+   - You'll see the deployment workflow running
+   - Green checkmark = successful deployment
+   - Red X = deployment failed (check logs for details)
+
+**How it works:**
+- The workflow automatically triggers on commits to main/master branches
+- All project files are uploaded as-is (static HTML deployment)
+- No build process needed - `index.html` serves as the entry point
+- GitHub Pages provides HTTPS automatically for AR camera access
+
+### Static File Serving (Replit Development)
 - The application is served as static files
 - No backend processing required
 - All AR processing happens client-side in the browser
 
 ### Production Considerations
-- HTTPS required for camera access on most devices
+- HTTPS required for camera access on most devices (GitHub Pages provides this automatically)
 - Ensure all CDN resources are accessible
 - Test on mobile devices for best AR experience
 - QR codes should be printed clearly for reliable tracking
